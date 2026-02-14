@@ -1,0 +1,224 @@
+.achievements-section {
+  min-height: 100vh;
+  padding: 4rem 2rem 4rem 8rem;
+  background: #FAFAF7;
+}
+
+.achievements-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.achievements-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1A2C59;
+  margin-bottom: 3rem;
+}
+
+/* Awards Section */
+.awards-section {
+  margin-bottom: 5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.awards-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.awards-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.award-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.award-date-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.award-date-bg {
+  position: absolute;
+  left: 3rem;
+  right: -1rem;
+  height: 50%;
+  top: 25%;
+  background: #F4E6A1;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.award-date {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5rem;
+  color: #1A2C59;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+.award-description {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3rem;
+  color: #1A2C59;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+/* In the News Section */
+.in-the-news {
+  margin-top: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.in-the-news.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subsection-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1A2C59;
+  margin-bottom: 2rem;
+}
+
+.news-boxes-wrapper {
+  position: relative;
+}
+
+.news-boxes-header-bg {
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  right: -20px;
+  height: 40px;
+  background: #F4E6A1;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.news-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+  align-items: start;
+}
+
+.news-box {
+  background: transparent;
+  border: 2px solid #F4E6A1;
+  border-radius: 0;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.news-box-header {
+  height: 60px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.news-box-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #1A2C59;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  z-index: 4;
+}
+
+.news-box-content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.news-box-text {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  color: #1A2C59;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .awards-layout {
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+  }
+  
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-section {
+    padding: 4rem 1rem 2rem 4rem;
+  }
+  
+  .awards-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .awards-dates-column {
+    display: none;
+  }
+  
+  .award-date {
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: 600;
+  }
+  
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}

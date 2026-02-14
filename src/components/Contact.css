@@ -1,0 +1,130 @@
+.contact-section {
+  min-height: 100vh;
+  padding: 4rem 2rem 4rem 8rem;
+  background: #FAFAF7;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1A2C59;
+  margin: 0 0 3rem 0;
+}
+
+.contact-links {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-links.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-boxes-wrapper {
+  position: relative;
+}
+
+.contact-boxes-header-bg {
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  right: -20px;
+  height: 40px;
+  background: #F4E6A1;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.contact-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-box {
+  background: transparent;
+  border: 2px solid #F4E6A1;
+  border-radius: 0;
+  height: 193px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  position: relative;
+}
+
+.contact-box-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.contact-box-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #1A2C59;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  z-index: 4;
+}
+
+.contact-box-content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-box-text {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2rem;
+  color: #1A2C59;
+  text-decoration: none;
+  display: block;
+  transition: opacity 0.3s ease;
+  text-align: left;
+}
+
+.contact-box-text:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .contact-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 1rem 2rem 4rem;
+  }
+  
+  .contact-boxes {
+    grid-template-columns: 1fr;
+  }
+}

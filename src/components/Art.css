@@ -1,0 +1,120 @@
+.art-section {
+  padding: 4rem 2rem 4rem 8rem;
+  background: #FAFAF7;
+  margin-left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.art-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.art-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1A2C59;
+  margin-bottom: 3rem;
+}
+
+.art-grid {
+  column-count: 3;
+  column-gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.art-item {
+  border: 5px solid #F4E6A1;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+  background: white;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 0 10px 0;
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  overflow: hidden;
+}
+
+.art-item:hover {
+  transform: scale(1.01);
+}
+
+.art-image-wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.art-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.art-image-placeholder {
+  width: 100%;
+  min-height: 200px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'EB Garamond', serif;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Remove row span classes - images stack naturally */
+
+.art-caption {
+  padding: 0;
+  font-size: 0.875rem;
+  color: #1A2C59;
+  text-align: center;
+  background: white;
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .art-grid {
+    column-count: 2;
+    column-gap: 10px;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+  .art-section {
+    padding: 4rem 1rem 2rem 4rem;
+  }
+  
+  .art-grid {
+    column-count: 1;
+    column-gap: 10px;
+  }
+}
